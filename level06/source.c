@@ -22,7 +22,7 @@ size_t  auth(char *buff, size_t value) {
         if (buff[i] < ' ') return 1;
         tmp = tmp + ((int)buff[i] ^ tmp) % 0x539;
     }
-    printf("value: %zu\n", tmp);
+    // printf("value: %zu\n", tmp);
     if (value != tmp) return 1;
 
     return 0;

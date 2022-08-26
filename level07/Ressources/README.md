@@ -57,8 +57,12 @@ Breakpoint 1 at 0x8048729
   ebp at 0xffffd6b8, eip at 0xffffd6bc
 
 # eip is at 0xffffd6bc
+# (in linux (42): 0xffffd70c)
 
 (gdb) b read_number
+[...]
+
+(gdb) c
 [...]
 read
 [...]
@@ -74,6 +78,7 @@ read
 # to know the address of the buffer
 # 0xffffd4d0: address of the buffer address
 # 0xffffd4f4: buffer address
+# (in linux (42): 0xffffd520 & 0xffffd544)
 # 0xffffd6bc - 0xffffd4f4 = 0x1c8
 # 0x1c8 / 0x4 = 0x72 = 114
 # the offset is 114

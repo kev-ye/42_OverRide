@@ -58,7 +58,7 @@ warning: Unable to access target memory at 0xf7fd3b74, halting search.
 
 # to know the address of /bin/sh in libc
 
-(gdb) print systemq
+(gdb) print system
 $1 = {<text variable, no debug info>} 0xf7e6aed0 <system>
 
 # to know the address of system in libc
