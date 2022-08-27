@@ -17,7 +17,7 @@ admin does not have access!
 
 Analyze with ghidra and disassembler the code in GDB
 
-```cHh74RPnuQ9sa5JAEXgNWCqz7sXGnh5J5M9KfPg3H
+```c
 // check source.c file
 ```
 
