@@ -23,7 +23,7 @@ void    test(int value, int n) {
 
     switch(n) {
         default:
-            decrypt(n);
+            decrypt(random());
             break;
         case 0x1:
             decrypt(n);
