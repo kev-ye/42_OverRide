@@ -21,7 +21,7 @@ int decrypt(int value) {
 void    test(int value, int n) {
     n = n - value;
 
-    switch(n) {
+    switch(n < 0x15) {
         default:
             decrypt(random());
             break;
